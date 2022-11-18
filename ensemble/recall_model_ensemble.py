@@ -101,10 +101,10 @@ def numpy_file(file_name, file_weight, hr2t, h_r, file_type='valid'):
 
 
 # validation bert recall
-# print("=========  validation bert recall  =========")
-# for file, weight in val_bert_recall:
-#     print("process rule file: %s, weight: %.2f" % (file, weight))
-#     numpy_file(file, weight, val_hr2t, val_hr)
+print("=========  validation bert recall  =========")
+for file, weight in val_bert_recall:
+    print("process rule file: %s, weight: %.2f" % (file, weight))
+    numpy_file(file, weight, val_hr2t, val_hr)
 
 # validation rule recall
 print("=========  validation rule recall  =========")
@@ -141,10 +141,10 @@ print(len(recall_hrt))
 print("start generate test candidate ...", end="\n\n")
 if get_test:
     # test bert recall
-    # print("=========  test bert recall  =========")
-    # for file, weight in test_bert_recall:
-    #     print("process rule file: %s, weight: %.2f" % (file, weight))
-    #     numpy_file(file, weight, test_hr2t, test_hr, 'test')
+    print("=========  test bert recall  =========")
+    for file, weight in test_bert_recall:
+        print("process rule file: %s, weight: %.2f" % (file, weight))
+        numpy_file(file, weight, test_hr2t, test_hr, 'test')
     # test rule recall
     print("=========  test rule recall  =========")
     for file, weight in test_rule_recall:
